@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Armador de PC PRO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>💻 Armador de Laptop PRO</h1>
+    <p>Arma tu computadora paso a paso</p>
+</header>
+
+<div class="contenedor">
+
+    <!-- TIPO -->
+    <div class="card">
+        <h2>Tipo de Laptop</h2>
+        <select id="tipo">
+            <option value="0">Selecciona</option>
+            <option value="2000">Oficina - $2000</option>
+            <option value="5000">Gamer - $5000</option>
+            <option value="4000">Diseño - $4000</option>
+        </select>
+    </div>
+
+    <!-- CPU -->
+    <div class="card">
+        <h2>Procesador</h2>
+        <select id="cpu">
+            <option value="0">Selecciona</option>
+            <option value="3000">Intel i5 - $3000</option>
+            <option value="5000">Intel i7 - $5000</option>
+            <option value="7000">Ryzen 7 - $7000</option>
+        </select>
+    </div>
+
+    <!-- GPU -->
+    <div class="card">
+        <h2>Tarjeta Gráfica</h2>
+        <select id="gpu">
+            <option value="0">Selecciona</option>
+            <option value="4000">GTX 1660 - $4000</option>
+            <option value="8000">RTX 3060 - $8000</option>
+            <option value="12000">RTX 4070 - $12000</option>
+        </select>
+    </div>
+
+    <!-- RAM -->
+    <div class="card">
+        <h2>Memoria RAM</h2>
+        <select id="ram">
+            <option value="0">Selecciona</option>
+            <option value="1500">8GB - $1500</option>
+            <option value="2500">16GB - $2500</option>
+            <option value="4000">32GB - $4000</option>
+        </select>
+    </div>
+
+    <!-- STORAGE -->
+    <div class="card">
+        <h2>Almacenamiento</h2>
+        <select id="storage">
+            <option value="0">Selecciona</option>
+            <option value="1000">SSD 500GB - $1000</option>
+            <option value="2000">SSD 1TB - $2000</option>
+            <option value="3500">SSD 2TB - $3500</option>
+        </select>
+    </div>
+
+    <button onclick="calcularTotal()">Calcular Total</button>
+    <button onclick="comprar()">Comprar 🛒</button>
+
+    <!-- RESULTADO -->
+    <div class="resultado">
+        <h2>Total: $<span id="total">0</span></h2>
+    </div>
+
+</div>
+
+<!-- TICKET -->
+<div id="ticket" class="ticket oculto">
+    <h2>🧾 Ticket de Compra</h2>
+    <div id="detalle"></div>
+    <h3>Total: $<span id="totalTicket">0</span></h3>
+    <p id="fecha"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
